@@ -19,6 +19,7 @@ type SelectFieldProps = {
   defaultValue?: SelectOptions;
   handleChange?: (el: string) => void;
   setIsRoleIsDoctor?: (el: boolean) => void;
+  required?: boolean;
 };
 
 const FormSelectField = ({
@@ -31,21 +32,23 @@ const FormSelectField = ({
   defaultValue,
   handleChange,
   setIsRoleIsDoctor,
+  required,
 }: SelectFieldProps) => {
   const { control, watch } = useFormContext();
   const srv = watch();
 
   if (srv?.role === USER_ROLE.DOCTOR && setIsRoleIsDoctor) {
-    console.log("1", srv.role);
     setIsRoleIsDoctor(true);
   } else if (srv?.role !== USER_ROLE.DOCTOR && setIsRoleIsDoctor) {
-    console.log("2", srv.role);
     setIsRoleIsDoctor(false);
   }
 
   return (
     <>
-      <p className="mb-2 bold">{label ? label : null}</p>
+      <p className="mb-1">
+        {label ? <label className="label_text ">{label} </label> : null}
+        {required ? <span className="text-red-500">*</span> : null}
+      </p>
 
       <Controller
         control={control}

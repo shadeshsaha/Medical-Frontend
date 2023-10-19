@@ -1,13 +1,15 @@
 "use client";
 
-import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
+/* eslint-disable @next/next/no-img-element */
+import { removeFromCart } from "@/Redux/features/addToCartSlice/addToCartSlice";
+import { useAppDispatch, useAppSelector } from "@/Redux/hook";
+import { noImage } from "@/helpers/noImage/noImage";
+import { IServiceTypes } from "@/types/Service";
 import { CloseOutlined } from "@ant-design/icons";
 import { Dialog, Transition } from "@headlessui/react";
+import { Empty, message } from "antd";
 import Link from "next/link";
 import { Fragment } from "react";
-
-import { removeFromCart } from "@/Redux/slice/cartSlice";
-import { Empty } from "antd";
 
 type IAddToCardProps = {
   open: boolean;
@@ -20,18 +22,18 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
   const dispatch = useAppDispatch();
 
   const handleRemoveFromCart = (serviceId: string) => {
-    console.log(serviceId);
     dispatch(removeFromCart(serviceId));
+    message.success("Service removed from cart");
   };
 
   const subtotal = cart?.reduce(
-    (total, single) => total + single?.servicePrice,
+    (total: any, single: any) => total + single.servicePrice,
     0
   );
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Dialog as="div" className="relative z-30" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -61,7 +63,7 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                       <div className="flex items-start justify-between">
                         <Dialog.Title className="text-lg font-medium text-gray-900">
-                          cart
+                          Shopping cart
                         </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
                           <button
@@ -80,18 +82,18 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                         <div className="flow-root">
                           <ul
                             role="list"
-                            className="-my-6 divide-y  divide-gray-200"
+                            className="-my-6 divide-y divide-gray-200"
                           >
-                            {cart?.map((service: any) => (
-                              <>
+                            {cart?.length > 0 ? (
+                              cart?.map((service: IServiceTypes) => (
                                 <li
-                                  key={service.serviceId}
+                                  key={service?.serviceId}
                                   className="flex py-6"
                                 >
                                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                     <img
-                                      src={service.serviceImage}
-                                      alt={service.serviceImage}
+                                      src={service?.serviceImage ?? noImage}
+                                      alt={service?.serviceName}
                                       className="h-full w-full object-cover object-center"
                                     />
                                   </div>
@@ -99,18 +101,26 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                                   <div className="ml-4 flex flex-1 flex-col">
                                     <div>
                                       <div className="flex justify-between text-base font-medium text-gray-900">
-                                        <h3>{service?.serviceName}</h3>
+                                        <h3>
+                                          <Link
+                                            href={`/services/${service?.serviceId}`}
+                                          >
+                                            {service?.serviceName}
+                                          </Link>
+                                        </h3>
                                         <p className="ml-4">
-                                          ${service?.servicePrice}
+                                          {service?.servicePrice}
                                         </p>
                                       </div>
                                     </div>
                                     <div className="flex flex-1 items-end justify-between text-sm">
-                                      <div className="flex justify-end w-full">
+                                      <p className="text-gray-500">Qty 1</p>
+
+                                      <div className="flex">
                                         <button
                                           onClick={() =>
                                             handleRemoveFromCart(
-                                              service?.serviceId
+                                              service?.serviceId!
                                             )
                                           }
                                           type="button"
@@ -122,18 +132,11 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                                     </div>
                                   </div>
                                 </li>
-                              </>
-                            ))}
+                              ))
+                            ) : (
+                              <Empty description="No Products" />
+                            )}
                           </ul>
-                        </div>
-                        <div className="flex justify-center items-center">
-                          {cart?.length === 0 && (
-                            <Empty
-                              description={
-                                <span>{`You forget to add service`}</span>
-                              }
-                            ></Empty>
-                          )}
                         </div>
                       </div>
                     </div>
@@ -141,7 +144,7 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
-                        <p>$ {subtotal}</p>
+                        <p>৳{subtotal}</p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">
                         Shipping and taxes calculated at checkout.
@@ -154,15 +157,15 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                           Checkout
                         </Link>
                       </div>
-                      <div className="mt-6 flex justify-center  text-center text-sm text-gray-500">
+                      <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                          or{" "}
+                          or
                           <button
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                             onClick={() => setOpen(false)}
                           >
-                            Continue Browsing
+                            Continue Shopping
                             <span aria-hidden="true"> &rarr;</span>
                           </button>
                         </p>

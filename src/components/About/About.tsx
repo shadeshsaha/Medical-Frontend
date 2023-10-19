@@ -1,7 +1,6 @@
-import React from "react";
-import aboutImageOne from "../../../public/assists/about_doctor_female.jpg";
-import aboutImageTwo from "../../../public/assists/about_doctor-2.jpg";
 import Image from "next/image";
+import aboutImageTwo from "../../../public/assists/about_doctor-2.jpg";
+import aboutImageOne from "../../../public/assists/about_doctor_female.jpg";
 
 const About = () => {
   return (
@@ -24,12 +23,12 @@ const About = () => {
         />
       </div>
 
-      {/* about */}
+      {/* About Section */}
       <div className="font-inter my-[20px] md:my-0 flex flex-col h-[400px] justify-around md:w-[400px]">
         <p className="text-primary md:text-[20px] text-[16px] font-semibold">
           ABOUT MEDDIC
         </p>
-        <p className="font-poppins md:text-[45px] text-[30px] md:w-[500px]">
+        <p className="font-poppins md:text-[45px] text-[35px] md:w-[550px]">
           We Collaborate for Better Healthcare
         </p>
         <p className="md:w-[500px] text-gray-[400px] font-poppins text-gray-500">

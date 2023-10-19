@@ -1,6 +1,6 @@
 "use client";
 import About from "@/components/About/About";
-import Apointment from "@/components/Apointment/Apointment";
+import Apointment from "@/components/Appointment/Appointment";
 import Banner from "@/components/Banner/Banner";
 import BlogPage from "@/components/BlogPage/BlogPage";
 import Faqs from "@/components/Faqs/Faqs";

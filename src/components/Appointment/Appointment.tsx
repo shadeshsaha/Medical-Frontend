@@ -1,7 +1,8 @@
 "use client";
-import { useCreateBookingMutation } from "@/Redux/api/features/bookingApi";
-import { useGetServiceQuery } from "@/Redux/api/features/serviceApi";
-import { useGetSlotQuery } from "@/Redux/api/features/slotApi";
+
+import { useCreateBookingMutation } from "@/Redux/features/bookingApi/bookingApi";
+import { useGetServicesQuery } from "@/Redux/features/serviceApi/serviceApi";
+import { useGetSlotQuery } from "@/Redux/features/slotApi/slotApi";
 import { isLoggedIn } from "@/services/auth.services";
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Modal, message } from "antd";
@@ -20,13 +21,10 @@ const Apointment = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   query["searchTerm"] = searchTerm;
 
-  const { data: slotData, isLoading: slotLoading } = useGetSlotQuery({
-    ...query,
-  });
+  const { data: slotData, isLoading: slotLoading } = useGetSlotQuery(undefined);
 
-  const { data: serviceData, isLoading: serviceLoading } = useGetServiceQuery({
-    ...query,
-  });
+  const { data: serviceData, isLoading: serviceLoading } =
+    useGetServicesQuery(undefined);
 
   const [createBooking, { isLoading, isError }] = useCreateBookingMutation();
 
@@ -56,23 +54,6 @@ const Apointment = () => {
   // };
 
   const bookingOnSubmit = async (data: any) => {
-    message.loading("Creating new Booking");
-
-    const dateString = data.appointmentDate?.$d;
-    const dateObject = new Date(dateString);
-
-    // Get ISO string
-    const isoString = dateObject.toISOString();
-
-    // console.log(isoString);
-
-    const BookingData = {
-      appointmentDate: isoString,
-      slotId: data.slot.slotId,
-      serviceId: data.service.serviceId,
-    };
-    console.log(BookingData);
-
     if (!userLoggedIn) {
       confirm({
         title: "Please Login First",
@@ -87,17 +68,30 @@ const Apointment = () => {
       return;
     } else {
       try {
+        const dateString = data.appointmentDate?.$d;
+        const dateObject = new Date(dateString);
+
+        // Get ISO string
+        const isoString = dateObject.toISOString();
+        console.log("isoString: ", isoString);
+
+        const BookingData = {
+          appointmentDate: isoString,
+          slotId: data.slot.slotId,
+          serviceId: data.service.serviceId,
+        };
+
         const res = await createBooking(BookingData).unwrap();
-        console.log(
-          "🚀 ~ file: FeedBackForum.tsx:35 ~ handleSubmit ~ res:",
-          res
-        );
+        console.log("res: ", res);
+
         if (res?.success) {
-          message.success("Feedback Submitted Successfully");
+          message.success(
+            "Slot added on your booking.admin will verified and confirm your booking"
+          );
         }
       } catch (error: any) {
-        console.error("Some thing was wrong");
-        message.error("Some thing was wrong");
+        console.error(error);
+        message.error(error?.data?.message);
       }
     }
   };
@@ -125,26 +119,27 @@ const Apointment = () => {
           or disqualify opportunities.
         </p>
 
-        {/* apoinment form */}
-
+        {/* Appointment Form Start */}
         <Form submitHandler={bookingOnSubmit}>
-          <div className="my-[12px] flex items-center justify-center gap-2 w-full">
-            <div style={{ margin: "10px 0px", width: "50%" }}>
+          <div className="my-[12px] flex flex-col items-center justify-center gap-2 w-full">
+            <div style={{ margin: "10px 0px", width: "100%" }}>
               <FormDatePicker name="appointmentDate" label="Appointment Date" />
             </div>
-            <div style={{ margin: "10px 0px", width: "40%" }}>
+            <div style={{ margin: "10px 0px", width: "100%" }}>
               <FormSelectField
                 name="slot.slotId"
                 label="Booking Slot"
-                options={slotData?.map((c: any) => ({
+                required
+                options={slotData?.data?.map((c: any) => ({
                   label: c.slotTime,
                   value: c.slotId,
                 }))}
               />
             </div>
-            <div style={{ margin: "10px 0px", width: "40%" }}>
+            <div style={{ margin: "10px 0px", width: "100%" }}>
               <FormSelectField
                 name="service.serviceId"
+                required
                 label="Service Name"
                 options={serviceData?.map((c: any) => ({
                   label: c.serviceName,

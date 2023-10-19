@@ -1,28 +1,3 @@
-export const authKey = "accessToken";
-
-export interface IMeta {
-  limit: number;
-  page: number;
-  total: number;
-}
-
-export type ResponseSuccessType = {
-  data: any;
-  meta?: IMeta;
-};
-
-export type IGenericErrorResponse = {
-  statusCode: number;
-  message: string;
-  errorMessages: IGenericErrorMessage[];
-};
-
-export type IGenericErrorMessage = {
-  path: string | number;
-  message: string;
-};
-
-
 export const bloodGroup = [
   {
     label: "A+",
@@ -55,5 +30,15 @@ export const bloodGroup = [
   {
     label: "AB-",
     value: "AB-",
+  },
+];
+export const ServiceStatus = [
+  {
+    label: "Available",
+    value: "available",
+  },
+  {
+    label: "Upcoming",
+    value: "upcoming",
   },
 ];

@@ -3,14 +3,14 @@ import { useState } from "react";
 
 import { Button, Col, Row, message } from "antd";
 
-import { useRouter } from "next/navigation";
-import { useRegistrationMutation } from "@/redux/api/authApi";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import { useRegistrationMutation } from "@/Redux/api/authApi";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 import FormSelectField from "@/components/Forms/FormSelectField";
-import UploadImage from "@/ui/UploadImage";
 import SpecializationFormField from "@/components/Forms/specializationField/SpecializationFormField";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import UploadImage from "@/ui/UploadImage";
+import { useRouter } from "next/navigation";
 
 const AddUserPage = () => {
   const roles = [
@@ -82,7 +82,7 @@ const AddUserPage = () => {
             </p>
             <Row gutter={{ xs: 24, xl: 8, lg: 8, md: 24 }}>
               <Col span={12} style={{ margin: "10px 0" }}>
-                <FormInput 
+                <FormInput
                   name="email"
                   label="Email"
                   type="email"

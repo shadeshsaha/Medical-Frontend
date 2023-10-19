@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import AddToCart from "../addToCart/AddToCart";
 import NavbarMenu from "./NavbarMenu";
-import Logo from "/public//assists/logo_Asset-1-1.png";
+import Logo from "/public/assists/logo_Asset-1-1.png";
 
 const Navbar = () => {
   const { firstName, lastName, userId, profileId, email, role } =

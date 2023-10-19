@@ -1,5 +1,5 @@
-import { baseApi } from "@/redux/api/baseApi";
-import { tagTypes } from "@/redux/tag-types";
+import { tagTypes } from "@/Redux/tag-types";
+import { baseApi } from "../baseApi";
 
 const BOOKING_API = "/appointment-booking";
 

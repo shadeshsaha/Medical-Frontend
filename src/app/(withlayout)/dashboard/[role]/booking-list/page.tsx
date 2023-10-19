@@ -1,30 +1,23 @@
 "use client";
 
-import {
-  DeleteOutlined,
-  EditOutlined,
-  ReloadOutlined,
-} from "@ant-design/icons";
+import { EditOutlined } from "@ant-design/icons";
 
-import { Button, Col, Input, Row, Select, message } from "antd";
-import Link from "next/link";
-import { useState } from "react";
-import dayjs from "dayjs";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
-import ActionBar from "@/ui/ActionBar";
-import TableList from "@/components/Table/TableList";
 import {
-  useGetBookingQuery,
   useGetMyBookingQuery,
   useUpdateBookingMutation,
-} from "@/redux/api/features/bookingApi";
-import FormSelectField from "@/components/Forms/FormSelectField";
-import FormInput from "@/components/Forms/FormInput";
-import ModalForm from "@/components/modal/modal";
+} from "@/Redux/api/features/bookingApi";
+import { useGetServiceQuery } from "@/Redux/api/features/serviceApi";
+import { useGetSlotQuery } from "@/Redux/api/features/slotApi";
 import Form from "@/components/Forms/Form";
-import { slot } from "@/constant/role";
-import { useGetSlotQuery } from "@/redux/api/features/slotApi";
-import { useGetServiceQuery } from "@/redux/api/features/serviceApi";
+import FormInput from "@/components/Forms/FormInput";
+import FormSelectField from "@/components/Forms/FormSelectField";
+import TableList from "@/components/Table/TableList";
+import ModalForm from "@/components/modal/modal";
+import ActionBar from "@/ui/ActionBar";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import { Button, Col, Input, Row, Select, message } from "antd";
+import dayjs from "dayjs";
+import { useState } from "react";
 
 const BookingList = () => {
   const query: Record<string, any> = {};

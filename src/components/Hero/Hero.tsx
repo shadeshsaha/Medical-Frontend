@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const Hero = () => {
   return (
     <>
@@ -145,7 +143,7 @@ const Hero = () => {
 
 export default Hero;
 
-const SingleImage = ({ href, imgSrc }) => {
+const SingleImage = ({ href, imgSrc }: any) => {
   return (
     <>
       <a href={href} className="flex w-full items-center justify-center">
@@ -155,7 +153,7 @@ const SingleImage = ({ href, imgSrc }) => {
   );
 };
 
-const ListItem = ({ children, navItemStyles, NavLink }) => {
+const ListItem = ({ children, navItemStyles, NavLink }: any) => {
   return (
     <>
       <li>

@@ -3,31 +3,31 @@
 import {
   DeleteOutlined,
   EditOutlined,
-  ReloadOutlined,
   ExclamationCircleFilled,
+  ReloadOutlined,
 } from "@ant-design/icons";
 import { Button, Col, Input, Modal, Row, message } from "antd";
-const { confirm } = Modal;
+import dayjs from "dayjs";
 import Link from "next/link";
 import { useState } from "react";
-import dayjs from "dayjs";
+const { confirm } = Modal;
 
-import Image from "next/image";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
-import ActionBar from "@/ui/ActionBar";
-import ModalForm from "@/components/modal/modal";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
-import UploadImage from "@/ui/UploadImage";
 import FormTextArea from "@/components/Forms/FormTextArea";
+import ModalForm from "@/components/modal/modal";
+import ActionBar from "@/ui/ActionBar";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import UploadImage from "@/ui/UploadImage";
+import Image from "next/image";
 
-import TableList from "@/components/Table/TableList";
 import {
   useDeleteServiceMutation,
   useGetServiceQuery,
   useUpdateServiceMutation,
-} from "@/redux/api/features/serviceApi";
+} from "@/Redux/api/features/serviceApi";
 import FormSelectField from "@/components/Forms/FormSelectField";
+import TableList from "@/components/Table/TableList";
 import { Category, ServiceStatus } from "@/constant/role";
 
 const ServiceList = () => {

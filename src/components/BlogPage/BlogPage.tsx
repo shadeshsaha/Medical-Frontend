@@ -1,13 +1,9 @@
-import { IBlogType } from "@/types/BlogType";
-import React from "react";
+import { useGetBlogsQuery } from "@/Redux/api/features/blogApi";
 import BlogCard from "./blogCard";
-import { useGetBlogsQuery } from "@/redux/api/features/blogApi";
 
 const BlogPage = () => {
   // get data
   const { data, isLoading } = useGetBlogsQuery(undefined);
-
-
 
   // const blogData: IBlogType[] = [
   //   {
@@ -81,7 +77,7 @@ const BlogPage = () => {
       {/* blogs */}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 ">
-        {data?.map((blog :any) => (
+        {data?.map((blog: any) => (
           <BlogCard key={blog.blogId} blog={blog} />
         ))}
       </div>

@@ -1,32 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import {
-  DeleteOutlined,
-  EditOutlined,
-  ReloadOutlined,
-} from "@ant-design/icons";
+import { EditOutlined, ReloadOutlined } from "@ant-design/icons";
 
 import { Button, Col, Input, Row, message } from "antd";
+import dayjs from "dayjs";
 import Link from "next/link";
 import { useState } from "react";
-import dayjs from "dayjs";
 
-import { Modal } from "antd";
-const { confirm } = Modal;
-import { ExclamationCircleFilled } from "@ant-design/icons";
-import { useGetAllUsersQuery, useUpdateUserInfoMutation } from "@/redux/api/features/userApi";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
-import ActionBar from "@/ui/ActionBar";
-import TableList from "@/components/Table/TableList";
-import ModalForm from "@/components/modal/modal";
+import {
+  useGetAllUsersQuery,
+  useUpdateUserInfoMutation,
+} from "@/Redux/api/features/userApi";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 import FormSelectField from "@/components/Forms/FormSelectField";
+import TableList from "@/components/Table/TableList";
+import ModalForm from "@/components/modal/modal";
 import { bloodGroup } from "@/constant/common";
-import UploadImage from "@/ui/UploadImage";
 import { getUserInfo } from "@/services/auth.services";
-
+import ActionBar from "@/ui/ActionBar";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import UploadImage from "@/ui/UploadImage";
+import { Modal } from "antd";
+const { confirm } = Modal;
 
 const UserList = () => {
   const { userRole } = getUserInfo() as any;

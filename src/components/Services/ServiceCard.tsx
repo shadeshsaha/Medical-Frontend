@@ -1,8 +1,7 @@
-import { useAppDispatch } from "@/redux/hooks";
-import { addToCart } from "@/redux/slice/cartSlice";
+import { useAppDispatch } from "@/Redux/hooks";
+import { addToCart } from "@/Redux/slice/cartSlice";
 import { IServiceTypes } from "@/types/Service";
 import Image from "next/image";
-import React from "react";
 
 type ServiceCardProps = {
   service: IServiceTypes;

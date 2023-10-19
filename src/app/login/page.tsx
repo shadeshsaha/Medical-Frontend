@@ -1,7 +1,7 @@
 "use client";
 
 import InputField from "@/components/InputField/InputField";
-import { useUserLoginMutation } from "@/redux/api/authApi";
+import { useUserLoginMutation } from "@/Redux/api/authApi";
 import { storeUserInfo } from "@/services/auth.services";
 
 import { Button, message } from "antd";

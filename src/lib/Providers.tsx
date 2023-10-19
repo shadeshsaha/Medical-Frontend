@@ -1,13 +1,12 @@
 "use client";
+import store from "@/Redux/store";
 import { Provider } from "react-redux";
 import StyledComponentsRegistry from "./AntResistry";
-import { ConfigProvider } from "antd";
-import store from "@/redux/store";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <ConfigProvider
+      {/* <ConfigProvider
         theme={{
           token: {
             // Seed Token
@@ -24,7 +23,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
         <Provider store={store}>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </Provider>
-      </ConfigProvider>
+      </ConfigProvider> */}
+
+      <Provider store={store}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </Provider>
     </>
   );
 };

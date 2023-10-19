@@ -1,22 +1,14 @@
 "use client";
-import { useState } from "react";
 
+import { useCreateCategoryMutation } from "@/Redux/api/features/categoryApi";
+import Form from "@/components/Forms/Form";
+import FormInput from "@/components/Forms/FormInput";
+import FormTextArea from "@/components/Forms/FormTextArea";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
 import { Button, Col, Row, message } from "antd";
 import { useRouter } from "next/navigation";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
-import Form from "@/components/Forms/Form";
-import UploadImage from "@/ui/UploadImage";
-import FormTextArea from "@/components/Forms/FormTextArea";
-import { useCreateBlogMutation } from "@/redux/api/features/blogApi";
-import FormInput from "@/components/Forms/FormInput";
-import FormSelectField from "@/components/Forms/FormSelectField";
-import { Category, ServiceStatus } from "@/constant/role";
-import { useCreateServiceMutation } from "@/redux/api/features/serviceApi";
-import { parentSelectorLinter } from "@ant-design/cssinjs";
-import { useCreateCategoryMutation } from "@/redux/api/features/categoryApi";
 
 const AddBlogPage = () => {
-    
   const [createCategory, { isLoading, isError }] = useCreateCategoryMutation();
 
   const router = useRouter();
@@ -87,7 +79,7 @@ const AddBlogPage = () => {
               <Col span={24} style={{ margin: "10px 0" }}>
                 <div style={{ margin: "10px 0px" }}>
                   <FormTextArea
-                    style={{ margin: "10px 0px" }}
+                    // style={{ margin: "10px 0px" }}
                     name="description"
                     label="Description"
                     rows={8}

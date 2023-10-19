@@ -1,7 +1,7 @@
+import { useGetServiceQuery } from "@/Redux/api/features/serviceApi";
 import { IServiceTypes } from "@/types/Service";
-import React, { useState } from "react";
+import { useState } from "react";
 import ServiceCard from "./ServiceCard";
-import { useGetServiceQuery } from "@/redux/api/features/serviceApi";
 
 const Services = () => {
   const query: Record<string, any> = {};
@@ -116,9 +116,6 @@ const Services = () => {
           <ServiceCard key={index} service={service} />
         ))}
       </div>
-        
-
-
     </div>
   );
 };

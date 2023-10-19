@@ -2,11 +2,11 @@
 
 import InputField from "@/components/InputField/InputField";
 import LoadingButton from "@/components/ui/button";
-import { useRegistrationMutation } from "@/redux/api/authApi";
+import { useRegistrationMutation } from "@/Redux/api/authApi";
 import { message } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const RegisterPage = () => {
   const {

@@ -1,5 +1,6 @@
-import { baseApi } from "@/redux/api/baseApi";
-import { tagTypes } from "@/redux/tag-types";
+import { tagTypes } from "@/Redux/tag-types";
+import { baseApi } from "../baseApi";
+
 const BLOG_API = "/blogs";
 
 const blogApi = baseApi.injectEndpoints({

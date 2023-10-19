@@ -1,14 +1,13 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
+import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
 import { CloseOutlined } from "@ant-design/icons";
+import { Dialog, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { Fragment } from "react";
 
+import { removeFromCart } from "@/Redux/slice/cartSlice";
 import { Empty } from "antd";
-import { removeFromCart } from "@/redux/slice/cartSlice";
 
 type IAddToCardProps = {
   open: boolean;
@@ -26,7 +25,7 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
   };
 
   const subtotal = cart?.reduce(
-    (total, single) => total + single.servicePrice,
+    (total, single) => total + single?.servicePrice,
     0
   );
 

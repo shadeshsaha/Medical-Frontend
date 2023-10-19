@@ -1,11 +1,10 @@
 "use client";
+import { useGetFaqQuery } from "@/Redux/api/features/faqApi";
 import { CaretRightOutlined } from "@ant-design/icons";
-import type { CSSProperties } from "react";
-import React from "react";
 import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
-import { useGetFaqQuery } from "@/redux/api/features/faqApi";
-
+import type { CSSProperties } from "react";
+import React from "react";
 
 const getItems: (
   panelStyle: CSSProperties,

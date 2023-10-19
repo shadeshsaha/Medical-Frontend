@@ -1,18 +1,15 @@
 "use client";
 
 import Form from "@/components/Forms/Form";
-import FormDatePicker from "@/components/Forms/FormDatePicker";
-import FormInput from "@/components/Forms/FormInput";
 import FormSelectField from "@/components/Forms/FormSelectField";
 
 // import FormMultiSelectField from "@/components/Forms/FormMultiSelectField";
 // import { SelectOptions } from "@/components/Forms/FormSelectField";
 import UMBreadCrumb from "@/components/ui/UMBreadCrumb";
 import { slot } from "@/constant/role";
-import { useCreateSlotMutation } from "@/redux/api/features/slotApi";
-import UploadImage from "@/ui/UploadImage";
+import { useCreateSlotMutation } from "@/Redux/api/features/slotApi";
 
-import { Button, Col, Row, message } from "antd";
+import { Button, Col, message, Row } from "antd";
 import { useRouter } from "next/navigation";
 
 const AddBooking = () => {

@@ -1,5 +1,6 @@
-import { tagTypes } from "../../tag-types";
-import { baseApi } from "../../api/baseApi";
+import { tagTypes } from "@/Redux/tag-types";
+import { baseApi } from "../baseApi";
+
 const USER_API = "/users";
 
 export const userApi = baseApi.injectEndpoints({

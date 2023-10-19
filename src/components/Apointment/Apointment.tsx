@@ -1,24 +1,19 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import InputField from "../InputField/InputField";
-import { useForm, SubmitHandler } from "react-hook-form";
-import TextArea from "antd/es/input/TextArea";
-import FormSelectField from "../Forms/FormSelectField";
-import { useCreateBookingMutation } from "@/redux/api/features/bookingApi";
-import { useRouter } from "next/navigation";
-import { useGetSlotQuery } from "@/redux/api/features/slotApi";
-import Form from "../Forms/Form";
-import FormInput from "../Forms/FormInput";
-import { useGetServiceQuery } from "@/redux/api/features/serviceApi";
-import FormDatePicker from "../Forms/FormDatePicker";
-import { getUserInfo, isLoggedIn } from "@/services/auth.services";
-import { Button, Modal, message } from "antd";
-const { confirm } = Modal;
+import { useCreateBookingMutation } from "@/Redux/api/features/bookingApi";
+import { useGetServiceQuery } from "@/Redux/api/features/serviceApi";
+import { useGetSlotQuery } from "@/Redux/api/features/slotApi";
+import { isLoggedIn } from "@/services/auth.services";
 import { ExclamationCircleFilled } from "@ant-design/icons";
+import { Modal, message } from "antd";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Form from "../Forms/Form";
+import FormDatePicker from "../Forms/FormDatePicker";
+import FormSelectField from "../Forms/FormSelectField";
+const { confirm } = Modal;
 
 const Apointment = () => {
-
   const userLoggedIn = isLoggedIn();
 
   const query: Record<string, any> = {};

@@ -12,7 +12,7 @@ const Contents = ({ children }: { children: React.ReactNode }) => {
         color: "black",
       }}
     >
-      {/* Header     */}
+      {/* Header */}
       this is header for dashboard
       {children}
     </Content>

@@ -10,16 +10,20 @@ import { Button, Col, Row, message } from "antd";
 import Link from "next/link";
 import { useState } from "react";
 
-import { ExclamationCircleFilled } from "@ant-design/icons";
-import { Modal } from "antd";
-import { useDeleteFaqMutation, useGetFaqQuery, useUpdateFaqMutation } from "@/redux/api/features/faqApi";
-import UMBreadCrumb from "@/ui/UMBreadCrumb";
-import ActionBar from "@/ui/ActionBar";
-import UMTable from "@/ui/UMtable";
-import ModalForm from "@/components/modal/modal";
+import {
+  useDeleteFaqMutation,
+  useGetFaqQuery,
+  useUpdateFaqMutation,
+} from "@/Redux/api/features/faqApi";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 import FormTextArea from "@/components/Forms/FormTextArea";
+import ModalForm from "@/components/modal/modal";
+import UMTable from "@/components/ui/UMTable";
+import ActionBar from "@/ui/ActionBar";
+import UMBreadCrumb from "@/ui/UMBreadCrumb";
+import { ExclamationCircleFilled } from "@ant-design/icons";
+import { Modal } from "antd";
 
 const { confirm } = Modal;
 

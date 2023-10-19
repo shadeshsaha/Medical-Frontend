@@ -3,10 +3,9 @@
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 import FormTextArea from "@/components/Forms/FormTextArea";
-import { useCreateFaqMutation } from "@/redux/api/features/faqApi";
+import { useCreateFaqMutation } from "@/Redux/api/features/faqApi";
 import UMBreadCrumb from "@/ui/UMBreadCrumb";
 import { Button, message } from "antd";
-import React from "react";
 
 const AddFaq = () => {
   const [createFaq, { isLoading, isSuccess }] = useCreateFaqMutation(undefined);

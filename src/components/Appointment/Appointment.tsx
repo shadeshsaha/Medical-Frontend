@@ -14,7 +14,7 @@ import FormDatePicker from "../Forms/FormDatePicker";
 import FormSelectField from "../Forms/FormSelectField";
 const { confirm } = Modal;
 
-const Apointment = () => {
+const Appointment = () => {
   const userLoggedIn = isLoggedIn();
 
   const query: Record<string, any> = {};
@@ -158,4 +158,4 @@ const Apointment = () => {
   );
 };
 
-export default Apointment;
+export default Appointment;

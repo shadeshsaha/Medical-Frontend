@@ -29,7 +29,7 @@ const BlogPage = () => {
             BLOG NEWS
           </p>
           <p className="font-poppins md:text-[45px] text-[35px] md:w-[550px]">
-            Articles From Meddic
+            Articles From CDiC
           </p>
         </div>
         <Link href={"/blogs"}>

@@ -1,7 +1,6 @@
-import React from "react";
-import Logo from "../../../public/assists/logoAsset-3.png";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../public/assists/logoAsset-3.png";
 
 const Footer = () => {
   return (
@@ -20,7 +19,7 @@ const Footer = () => {
             </Link>
 
             <p className="mt-4 text-center text-white lg:text-left lg:text-lg">
-              The MEDDIC sales qualification is a framework that helps sales
+              BIRDEM CDiC sales qualification is a framework that helps sales
               teams to qualify their sales opportunities by focusing on six
               important elements which are the: Metrics, Economic Buyer,
               Decision Criteria, Decision Process, Identify Pain, and Champion.

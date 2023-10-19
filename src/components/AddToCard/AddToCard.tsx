@@ -165,7 +165,7 @@ export default function AddToCard({ open, setOpen }: IAddToCardProps) {
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                             onClick={() => setOpen(false)}
                           >
-                            Continue Shopping
+                            &nbsp; Continue Shopping
                             <span aria-hidden="true"> &rarr;</span>
                           </button>
                         </p>

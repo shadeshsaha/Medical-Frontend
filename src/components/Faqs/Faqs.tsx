@@ -25,7 +25,7 @@ const Faqs = () => {
       {/* FAQS */}
       <div className="font-inter my-[20px] md:my-0 flex flex-col md:h-[400px] justify-around max-w-[1000px]">
         <p className="text-primary md:text-[20px] text-[16px] font-semibold">
-          ABOUT MEDDIC
+          ABOUT CDiC
         </p>
         <p className="font-poppins md:text-[45px] text-[35px] md:w-[550px]">
           We Collaborate for Better Healthcare

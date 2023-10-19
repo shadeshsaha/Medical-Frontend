@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import NotFoundImage from "../../public/assists/404 Error-bro.png";
 
 const NotFound = () => {
   const error = {
@@ -10,27 +12,32 @@ const NotFound = () => {
       <div className="flex items-center justify-center ">
         <div className="bg-white  rounded-md flex items-center justify-center mx-4 md:w-2/3 ">
           <div className="flex flex-col items-center ">
-            <img
+            {/* <img
               loading="lazy"
               className="px-4 hidden md:block"
               src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"
               alt=""
-              // width={50}
-              // height={50}
+            /> */}
+            <Image
+              width={200}
+              height={200}
+              src={NotFoundImage}
+              className="w-[200px]  h-[200px]   object-cover object-center  rounded-full border shadow-xl"
+              alt=""
             />
-            <img
+            {/* <img
               loading="lazy"
               className="md:hidden"
               src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"
               alt=""
-            />
+            /> */}
             <h1 className="px-4 pt-8 pb-4 text-center text-5xl font-bold leading-10 text-gray-800">
               OOPS! <span className="text-red-600">{`${error?.status}`}</span>
             </h1>
             <p className="px-4 pb-10 text-base leading-none text-center text-gray-600">
               <span className="text-red-600">{error?.statusText}</span> <br />
               <br />
-              No signal here! we cannot find the page you are looking for{" "}
+              We cannot find the page you are looking for{" "}
             </p>
             <Link href="/">
               <button className="mx-4 h-10 w-44 border rounded-md text-white text-base bg-primary hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-[#43efb9]">

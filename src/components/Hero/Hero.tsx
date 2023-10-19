@@ -19,7 +19,7 @@ const Hero = () => {
       {/* welcome */}
       <div className="font-inter my-[20px] md:my-0 flex flex-col h-[400px] justify-around">
         <p className="text-primary md:text-[20px] text-[16px] font-semibold">
-          WELCOME TO MEDDIC
+          WELCOME TO BIRDEM CDiC
         </p>
         <p className="font-poppins md:text-[55px] text-[35px] md:w-[550px]">
           We Are Here to Hear <br /> and Heal Your <br /> Health Problems

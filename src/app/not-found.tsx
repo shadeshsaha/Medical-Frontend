@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const NotFound = () => {
@@ -11,15 +10,15 @@ const NotFound = () => {
       <div className="flex items-center justify-center ">
         <div className="bg-white  rounded-md flex items-center justify-center mx-4 md:w-2/3 ">
           <div className="flex flex-col items-center ">
-            <Image
+            <img
               loading="lazy"
               className="px-4 hidden md:block"
               src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"
               alt=""
-              width={50}
-              height={50}
+              // width={50}
+              // height={50}
             />
-            <Image
+            <img
               loading="lazy"
               className="md:hidden"
               src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif"

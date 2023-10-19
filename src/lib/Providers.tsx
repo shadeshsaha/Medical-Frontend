@@ -1,5 +1,6 @@
 "use client";
 import store from "@/Redux/store";
+// import { ConfigProvider } from "antd";
 import { Provider } from "react-redux";
 import StyledComponentsRegistry from "./AntResistry";
 

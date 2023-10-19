@@ -69,7 +69,8 @@ const FeedBackForum = () => {
               Feedback
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600 text-[14px]">
-              Medic Need your feedback to improve our service. Please give us
+              CDiC Team need your feedback to improve our service. Please give
+              us 😀
             </p>
 
             <FormInput
@@ -114,7 +115,7 @@ const FeedBackForum = () => {
                 color: "#fff",
               }}
             >
-              Button
+              Submit
             </Button>
             <p className="text-xs text-gray-500 mt-3">
               Medical provide free Hospital Services for clinics and health care

@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import doctor from "../../../public/assists/vecteezy_doctor-3d-icon-illustration_28238992_258.png";
-import Care from "../../../public/assists/stock-vector-hospital-building-icon-vector-logo-1727598499-removebg-preview.png";
-import Phone from "../../../public/assists/phone-removebg-preview.png";
 import Image from "next/image";
+import Phone from "../../../public/assests/phone-removebg-preview.png";
+import Care from "../../../public/assests/stock-vector-hospital-building-icon-vector-logo-1727598499-removebg-preview.png";
+import doctor from "../../../public/assests/vecteezy_doctor-3d-icon-illustration_28238992_258.png";
 
 const Banner = () => {
   const BannerData = [

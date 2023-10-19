@@ -1,6 +1,6 @@
 import Image from "next/image";
-import aboutImageTwo from "../../../public/assists/about_doctor-2.jpg";
-import aboutImageOne from "../../../public/assists/about_doctor_female.jpg";
+import aboutImageTwo from "../../../public/assests/about_doctor-2.jpg";
+import aboutImageOne from "../../../public/assests/about_doctor_female.jpg";
 
 const About = () => {
   return (

@@ -1,9 +1,7 @@
 import { INavbarType } from "@/types/NavbarType";
-import Link from "next/link";
-import React from "react";
-import { Dropdown } from "antd";
 import type { MenuProps } from "antd";
-import { ArrowDownOutlined } from "@ant-design/icons";
+import { Dropdown } from "antd";
+import Link from "next/link";
 
 type NavbarMenuProps = {
   navbarData: INavbarType;

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import DoctorImage from "../../../public/assists/bruno-rodrigues-279xIHymPYY-unsplash-removebg-preview.png";
+import DoctorImage from "../../../public/assests/bruno-rodrigues-279xIHymPYY-unsplash-removebg-preview.png";
 
 const Hero = () => {
   const HeroData = [

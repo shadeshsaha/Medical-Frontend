@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-import logoWithName from "../../../../public/assists/logo_Asset-1-1.png";
-import logo from "../../../../public/assists/logo.png";
+import logo from "../../../../public/assests/logo.png";
+import logoWithName from "../../../../public/assests/logo_Asset-1-1.png";
 
 import { Layout, Menu } from "antd";
 import Image from "next/image";
-import { sidebarItems } from "./SitebarItems";
 import Link from "next/link";
+import { sidebarItems } from "./SitebarItems";
 
 const { Sider } = Layout;
 

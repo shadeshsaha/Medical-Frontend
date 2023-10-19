@@ -53,7 +53,7 @@ export default function UserReview({ data }: any) {
           </h2>
 
           <p className="mt-4 text-gray-700">
-            Medic is a platform that connects patients with doctors and
+            BIRDEM CDiC is a platform that connects patients with doctors and
             pharmacies. We are a team of doctors, pharmacists, and technologists
             that believe in the power of technology to improve access to
             healthcare for all Egyptians.

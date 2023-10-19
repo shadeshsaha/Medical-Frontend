@@ -10,7 +10,7 @@ const Loading = () => {
       }}
     >
       <Space>
-        <Spin tip="Loading" size="large">
+        <Spin tip="" size="large">
           <div className="content" />
         </Spin>
       </Space>

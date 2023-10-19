@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import NotFoundImage from "../../public/assists/404 Error-bro.png";
+import NotFoundImage from "../../public/assests/404 Error-bro.png";
 
 const NotFound = () => {
   const error = {
@@ -37,7 +37,7 @@ const NotFound = () => {
             <p className="px-4 pb-10 text-base leading-none text-center text-gray-600">
               <span className="text-red-600">{error?.statusText}</span> <br />
               <br />
-              We cannot find the page you are looking for{" "}
+              We cannot find the page you are looking for!!{" "}
             </p>
             <Link href="/">
               <button className="mx-4 h-10 w-44 border rounded-md text-white text-base bg-primary hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-[#43efb9]">

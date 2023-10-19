@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const initialState = {
   cart: [],
 };
+
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -14,6 +15,7 @@ export const cartSlice = createSlice({
         state.cart = [...state.cart, action.payload];
       }
     },
+
     removeFromCart: (state, action) => {
       const deleteCart = state.cart.filter((cart: any) => {
         return cart.serviceId !== action.payload;

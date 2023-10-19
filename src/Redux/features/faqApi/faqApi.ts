@@ -1,43 +1,39 @@
-import { baseApi } from "@/Redux/api/baseApi";
-import { tagTypes } from "@/Redux/tag-types";
-const FAQ_API = "/faqs";
+import { api } from "@/Redux/api/apiSlice";
 
-const faqApi = baseApi.injectEndpoints({
+const faqApi = api.injectEndpoints({
   endpoints: (builder) => ({
+    // get Faq
     getFaq: builder.query({
-      query: () => ({
-        url: `${FAQ_API}`,
-        method: "GET",
-      }),
-      providesTags: [tagTypes.faq],
+      query: () => `/faqs`,
+      providesTags: ["faq"],
+      transformResponse: (response: any) => response.data,
     }),
-
     // create Faq
     createFaq: builder.mutation({
-      query: (data) => ({
+      query: (body) => ({
         url: `/faqs/create-faq`,
         method: "POST",
-        data: data,
+        body,
       }),
-      invalidatesTags: [tagTypes.faq],
+      invalidatesTags: ["faq"],
+      // transformResponse: (response: any) => response.data,
     }),
     // update Faq
     updateFaq: builder.mutation({
-      query: ({ id, data }) => ({
+      query: ({ id, body }) => ({
         url: `/faqs/update/${id}`,
         method: "PATCH",
-        data: data,
+        body,
       }),
-      invalidatesTags: [tagTypes.faq],
+      invalidatesTags: ["faq"],
     }),
-
     // delete Faq
     deleteFaq: builder.mutation({
       query: (id) => ({
         url: `/faqs/delete/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: [tagTypes.faq],
+      invalidatesTags: ["faq"],
     }),
   }),
 });

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-
 import { useGetBlogQuery } from "@/Redux/features/blogApi/blogApi";
 import BlogCard from "@/components/BlogPage/blogCard";
 import UMBreadCrumb from "@/components/ui/UMBreadCrumb";

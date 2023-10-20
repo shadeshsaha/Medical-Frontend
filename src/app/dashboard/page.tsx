@@ -16,6 +16,7 @@ const Dashboard = () => {
   const { data: myAppointmentLength, isLoading: AppointmentLoading } =
     useGetMyAppointmentLengthQuery(undefined);
 
+  console.log(myAppointmentLength);
   let dashboardData = null;
 
   if (user?.role === USER_ROLE.USER) {

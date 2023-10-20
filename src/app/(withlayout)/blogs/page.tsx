@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+// next.config.js
 "use client";
 import { useGetBlogQuery } from "@/Redux/features/blogApi/blogApi";
 import BlogCard from "@/components/BlogPage/blogCard";
 import UMBreadCrumb from "@/components/ui/UMBreadCrumb";
 import { IBlogType } from "@/types/BlogType";
-import { Skeleton } from "antd";
+import { Image, Skeleton } from "antd";
 import Link from "next/link";
 
 const BlogsPages = () => {
@@ -21,6 +22,7 @@ const BlogsPages = () => {
   }
 
   const [data1, ...allBlogData] = data;
+  console.log("data1: ", data1);
 
   return (
     <section className="common">
@@ -32,10 +34,12 @@ const BlogsPages = () => {
           href={`/blogs/${data1?.blogId}`}
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 border-2 border-primary/20 hover:border-primary/80 rounded-xl "
         >
-          <img
+          <Image
             src={data1?.blogImage}
-            alt=""
+            alt="blog-image"
             className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 "
+            width={100}
+            height={100}
           />
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">

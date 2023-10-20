@@ -24,6 +24,7 @@ const Appointment = () => {
   query["searchTerm"] = searchTerm;
 
   const { data: slotData, isLoading: slotLoading } = useGetSlotQuery(undefined);
+  console.log("slotData:", slotData);
 
   const { data: serviceData, isLoading: serviceLoading } =
     useGetServicesQuery(undefined);

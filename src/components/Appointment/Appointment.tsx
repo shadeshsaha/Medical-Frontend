@@ -9,9 +9,11 @@ import { Modal, message } from "antd";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import app from "../../../public/assests/app.png";
 import Form from "../Forms/Form";
 import FormDatePicker from "../Forms/FormDatePicker";
 import FormSelectField from "../Forms/FormSelectField";
+
 const { confirm } = Modal;
 
 const Appointment = () => {
@@ -99,13 +101,12 @@ const Appointment = () => {
   return (
     <div className="common md:flex gap-10 items-center mb-[60px]">
       <Image
-        src="https://askproject.net/meddic/wp-content/uploads/sites/156/2023/10/team-of-doctors-discussing-something-at-hospital-c-FHAY6CS.jpg"
+        src={app}
         alt="Picture of the author"
-        width={500}
-        height={500}
-        className="rounded-xl md:w-[550px] md:h-[660px] border-2 "
+        width={400}
+        height={400}
+        className="rounded-xl md:w-[450px] md:h-[400px] border-2 "
       />
-
       {/* FAQS */}
       <div className="font-inter my-[20px] md:my-0 flex flex-col md:h-[400px] justify-around ">
         <p className="text-primary md:text-[20px] text-[16px] font-semibold">
@@ -115,8 +116,8 @@ const Appointment = () => {
           Book Your Appointment
         </p>
         <p className="md:w-[500px] text-gray-[400px] font-poppins text-gray-500">
-          The benefits of MEDDPICC are that it allows sellers to quickly qualify
-          or disqualify opportunities.
+          The benefits of BIRDEM CDiC are that it allows diabetic patients to
+          quickly heal their problems.
         </p>
 
         {/* Appointment Form Start */}
@@ -149,7 +150,11 @@ const Appointment = () => {
             </div>
           </div>
 
-          <button type="submit" className="appointmentButton">
+          <button
+            type="submit"
+            className="appointmentButton"
+            // style={{ marginBottom: "100px" }}
+          >
             Make Appoinment
           </button>
         </Form>

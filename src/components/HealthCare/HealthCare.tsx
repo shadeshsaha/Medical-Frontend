@@ -1,5 +1,3 @@
-import React from "react";
-import Image from "next/image";
 import { Button, Modal } from "antd";
 import Link from "next/link";
 
@@ -13,23 +11,23 @@ const HealthCare = () => {
   const bookAppointmentData: BookAppointmentData[] = [
     {
       _id: 1,
-      day: "Mon-Wed",
-      time: "8:00am - 5:00pm",
+      day: "Mon-Tue",
+      time: "8:00am - 3:00pm",
     },
     {
       _id: 2,
-      day: "Thu-Fri",
-      time: "9:00am - 6:00pm",
+      day: "Wed-Thu",
+      time: "9:00am - 3:00pm",
     },
     {
       _id: 3,
       day: "Sat-Sun",
-      time: "9:00am - 3:00pm",
+      time: "9:00am - 5:00pm",
     },
     {
       _id: 4,
-      day: "Mon-Wed",
-      time: "8:00am - 5:00pm",
+      day: "Sat-Thu",
+      time: "11:00am - 3:00pm",
     },
   ];
 
@@ -48,23 +46,26 @@ const HealthCare = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(https://askproject.net/meddic/wp-content/uploads/sites/156/2023/10/young-multiracial-doctor-sitting-at-reception-and-GCCHF87.jpg)`,
+        backgroundImage: `url(https://media.istockphoto.com/id/532399350/photo/doctor-on-a-phone-call-with-his-patient.jpg?s=612x612&w=0&k=20&c=LJ7JxluXrUmciy2VsRatte2-63MX2iqqaAPhfh_nzqc=)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        marginTop: "10%",
       }}
       className="h-screen common w-full mb-[150px] flex justify-end items-center border-2 border-borderColor"
     >
-      <div className="bg-primary rounded-xl md:p-[60px] p-[10px] font-inter text-white md:w-[720px] md:h-[780px]">
-        <p className="md:text-[18px] font-semibold pb-[16px]">WORKING HOURS</p>
+      <div
+        className="bg-primary rounded-xl md:p-[60px] p-[10px] font-inter text-white md:w-[720px] md:h-[780px]"
+        // style={{ marginTop: "4%" }}
+      >
+        <p className="md:text-[18px] font-semibold pb-[16px]">VISITING HOURS</p>
         <p className="md:text-[45px] text-[25px] font-sans">
           Healthcare at Its Finest
         </p>
 
         <p className="text-[14px] my-[12px]">
-          I am currently a senior at the University of Southern California
-          pursuing a dual degree in business administration and public policy,
-          management, and planning ...
+          BIRDEM CDiC Doctors Are Available Saturday To Thursday To Give Health
+          Checkup To Diabetic Patients. Book Your Appointment Online...
         </p>
 
         {/* book */}

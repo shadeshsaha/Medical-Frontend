@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Care from "../../../public/assests/eye.png";
 import Phone from "../../../public/assests/phone-removebg-preview.png";
-import Care from "../../../public/assests/stock-vector-hospital-building-icon-vector-logo-1727598499-removebg-preview.png";
 import doctor from "../../../public/assests/vecteezy_doctor-3d-icon-illustration_28238992_258.png";
 
 const Banner = () => {
@@ -13,14 +13,15 @@ const Banner = () => {
       image: doctor,
     },
     {
-      title: "Emergrncy Care",
-      description: "We are available for 24/7 for any emergency care.",
+      title: "Eye Care",
+      description:
+        "Our Eye Specialists Doctors are highly qualified and experienced. They are always available to give support to patients",
       image: Care,
     },
     {
-      title: "24/7 Full Support",
+      title: "Insulin Support",
       description:
-        "Our support team is always available to help you with any queries.",
+        "Our team is always available to help you with any queries about insulin.",
       image: Phone,
     },
   ];

@@ -5,11 +5,11 @@ import DoctorImage from "../../../public/assests/bruno-rodrigues-279xIHymPYY-uns
 const Hero = () => {
   const HeroData = [
     {
-      name: "25+",
+      name: "43+",
       description: "Years of Experience",
     },
     {
-      name: "140+",
+      name: "100+",
       description: "Specialist Doctors",
     },
   ];
@@ -21,13 +21,14 @@ const Hero = () => {
         <p className="text-primary md:text-[20px] text-[16px] font-semibold">
           WELCOME TO BIRDEM CDiC
         </p>
-        <p className="font-poppins md:text-[55px] text-[35px] md:w-[550px]">
-          We Are Here to Hear <br /> and Heal Your <br /> Health Problems
+        <p className="font-poppins md:text-[45px] text-[15px] md:w-[550px]">
+          “Smiles on the faces of the little ones afflicted by diabetes makes
+          our efforts worthwhile”
         </p>
         <p className="md:w-[500px] text-gray-[400px] font-poppins text-gray-500">
-          The benefits of MEDDPICC are that it allows sellers to quickly qualify
-          or disqualify opportunities before they get too far into the sales
-          process and gives sellers a framework to start from.
+          Provide total healthcare including rehabilitation for all diabetics
+          irrespective of gender, economic and social status through different
+          institutions of Diabetic Associations of Bangladesh.
         </p>
 
         <div className="flex w-full gap-5 my-[10px]">

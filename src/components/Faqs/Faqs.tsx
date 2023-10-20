@@ -31,8 +31,8 @@ const Faqs = () => {
           We Collaborate for Better Healthcare
         </p>
         <p className="md:w-[500px] text-gray-[400px] font-poppins text-gray-500">
-          The benefits of MEDDPICC are that it allows sellers to quickly qualify
-          or disqualify opportunities.
+          The benefits of BIRDEM CDiC are that it allows diabetic patients to
+          quickly heal their problems.
         </p>
 
         <FaqComponent size="large" itemData={items} isLoading={isLoading} />

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import logo from "../../../../public/assests/logo.png";
+import logo from "../../../../public/assests/app.png";
 import logoWithName from "../../../../public/assests/logo_Asset-1-1.png";
 
 import { Layout, Menu } from "antd";

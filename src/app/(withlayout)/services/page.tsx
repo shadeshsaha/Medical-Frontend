@@ -54,8 +54,11 @@ const ServicesPage = () => {
         <p className="text-[30px] font-bold">You may also like</p>
 
         <p className="text-xs">
-          There are many variations of passages of Lorem Ipsum available, <br />{" "}
-          but the majority have suffered alteration in some form,
+          There are a number of treatments available to help you manage and
+          treat your diabetes. Everyone is different, so treatment will vary
+          depending on your own individual needs. Insulin pumps, Islet cell
+          transplant, Tablets and medication, Weight loss surgery, Diet and
+          exercise, Insulin, Emotional support.
         </p>
       </div>
 

@@ -1,23 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import dayjs from "dayjs";
-import Image from "next/image";
-import { Button, Col, Row, Spin, message } from "antd";
-import { useState } from "react";
-import ModalForm from "@/components/modal/ModalForm";
-import Form from "@/components/Forms/Form";
-import FormInput from "@/components/Forms/FormInput";
-import FormSelectField from "@/components/Forms/FormSelectField";
-import { bloodGroup } from "@/constant/common";
-import UploadImage from "@/components/ui/UploadImage";
 import {
   useGetUserQuery,
   useUpdateMyProfileMutation,
   useUpdateMyUserInfoMutation,
 } from "@/Redux/features/userApi/userApi";
-import { noImage } from "@/helpers/noImage/noImage";
+import Form from "@/components/Forms/Form";
+import FormInput from "@/components/Forms/FormInput";
+import FormSelectField from "@/components/Forms/FormSelectField";
+import ModalForm from "@/components/modal/ModalForm";
+import UploadImage from "@/components/ui/UploadImage";
+import { bloodGroup } from "@/constant/common";
+import { Button, Col, Row, Spin, message } from "antd";
+import dayjs from "dayjs";
+import Image from "next/image";
+import { useState } from "react";
+// import { noImage } from "@/helpers/noImage/noImage";
 import Skeleton from "@/components/Loader/Skeleton";
+import noImage from "../../../../public/assests/noImage.png";
 
 const Profile = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);

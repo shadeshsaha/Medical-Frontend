@@ -1,4 +1,6 @@
 import Image from "next/image";
+import dev from "../../../../public/assests/dev.jpg";
+import insulin from "../../../../public/assests/insulin.jpg";
 
 const stats = [
   { label: "Telehealth  every 24 hours", value: "44 million" },
@@ -41,8 +43,7 @@ const team = [
   {
     name: "Shadesh Saha",
     role: "Co-Founder / CTO",
-    imageUrl:
-      "https://scontent.fspd3-1.fna.fbcdn.net/v/t39.30808-1/356389674_1975806969445318_9163088744677519037_n.jpg?stp=cp0_dst-jpg_e15_p120x120_q65&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=XeUdCenUkIEAX_cm_K-&_nc_ht=scontent.fspd3-1.fna&oh=00_AfCMA1SgvGtVxCR-wcGYaHjFK_WRrwMmUStyHnQTkgp7sQ&oe=65352FF0",
+    imageUrl: { dev },
   },
 ];
 
@@ -98,16 +99,14 @@ export default function Example() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    We are revolutionizing the healthcare system.
+                    We are revolutionizing the diabetic system.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    We are spearheading a revolutionary transformation in the
-                    healthcare sector, introducing groundbreaking innovations
-                    that are fundamentally altering the landscape of medical
-                    systems. Our efforts are ushering in a new era of patient
-                    care, where advanced technologies, data-driven insights, and
-                    streamlined processes converge to enhance the overall
-                    healthcare experience.
+                    To prevent and cure diabetes and to improve the lives of all
+                    people affected by diabetes. We lead the fight against the
+                    deadly consequences of diabetes and fight for those affected
+                    by diabetes. We fund research to prevent, cure and manage
+                    diabetes.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -185,14 +184,15 @@ export default function Example() {
             <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl leading-8 text-gray-600">
-                  Our mission is to redefine healthcare by harnessing
-                  cutting-edge technology and visionary approaches to ensure
-                  that every individual receives the highest quality of care. We
-                  are dedicated to creating a future where healthcare is not
-                  only more effective and efficient but also more accessible and
-                  patient-centered.
+                  Our mission is to use digital media to shape the future of
+                  healthcare. Whether that’s through our education programs or
+                  interactions on the forum, we want to improve health outcomes
+                  in every aspect of diabetes care. People with diabetes are the
+                  experts in their own condition, and we seek to bring power
+                  back to where it belongs: with the community that lives with
+                  diabetes every day.
                 </p>
-                <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
+                {/* <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                   <p>
                     By fostering innovation, promoting preventative measures,
                     and advancing medical solutions, we strive to improve the
@@ -209,7 +209,7 @@ export default function Example() {
                     to improve lives and well-being globally, making healthcare
                     more effective and efficient
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="lg:flex lg:flex-auto lg:justify-center">
                 <dl className="w-64 space-y-8 xl:w-80">
@@ -235,7 +235,7 @@ export default function Example() {
         {/* Image section */}
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <Image
-            src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2047"
+            src={insulin}
             alt=""
             className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
             width={2832}
@@ -366,7 +366,8 @@ export default function Example() {
               <li key={person.name}>
                 <Image
                   className="mx-auto h-24 w-24 rounded-full"
-                  src={person.imageUrl}
+                  src={dev}
+                  // src={person.imageUrl}
                   alt=""
                   width={96}
                   height={96}

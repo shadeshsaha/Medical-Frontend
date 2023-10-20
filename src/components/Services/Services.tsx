@@ -15,7 +15,7 @@ const Services = () => {
         OUR SERVICES
       </p>
       <p className="font-poppins md:text-[45px] text-[35px] md:w-[550px] py-[30px] ">
-        Amazing Medical Facilities Just for You
+        BIRDEM CDiC Facilities Just for You
       </p>
 
       {/* service card */}

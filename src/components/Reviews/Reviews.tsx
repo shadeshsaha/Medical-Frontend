@@ -34,13 +34,15 @@ export default function UserReview({ data }: any) {
       "keen-slider-next-desktop"
     );
 
-    keenSliderPrevious!.addEventListener("click", () => keenSlider.prev());
-    keenSliderNext!.addEventListener("click", () => keenSlider.next());
+    keenSliderPrevious?.addEventListener("click", () => keenSlider.prev());
+    keenSliderNext?.addEventListener("click", () => keenSlider.next());
 
-    keenSliderPreviousDesktop!.addEventListener("click", () =>
+    keenSliderPreviousDesktop?.addEventListener("click", () =>
       keenSlider.prev()
     );
-    keenSliderNextDesktop!.addEventListener("click", () => keenSlider.next());
+    keenSliderNextDesktop?.addEventListener("click", () => {
+      keenSlider.next();
+    });
   }, []);
 
   return (
@@ -53,7 +55,7 @@ export default function UserReview({ data }: any) {
           </h2>
 
           <p className="mt-4 text-gray-700">
-            BIRDEM CDiC is a platform that connects patients with doctors and
+            Medic is a platform that connects patients with doctors and
             pharmacies. We are a team of doctors, pharmacists, and technologists
             that believe in the power of technology to improve access to
             healthcare for all Egyptians.
@@ -108,6 +110,7 @@ export default function UserReview({ data }: any) {
           {/* main slider */}
           <div id="keen-slider" className="keen-slider">
             {/* card1 */}
+
             {data?.map((item: any, index: number) => (
               <div className="keen-slider__slide" key={index}>
                 <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">

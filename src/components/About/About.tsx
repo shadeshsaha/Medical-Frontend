@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import aboutImageTwo from "../../../public/assests/about_doctor-2.jpg";
 import aboutImageOne from "../../../public/assests/about_doctor_female.jpg";
 
 const About = () => {
   return (
-    <div className="common md:flex w-full justify-between md:py-[200px] my-[30px] items-center border-b-2">
+    <div className="common md:flex w-full justify-between md:py-[200px] mb-[30px] items-center border-b-2">
       <div className="flex flex-col md:flex-row gap-[50px]">
         <Image
           src={aboutImageOne}
@@ -38,7 +39,9 @@ const About = () => {
         </p>
 
         <div className="flex w-full gap-5 my-[10px]">
-          <button className="appointmentButton">Learn More</button>
+          <Link href={`/about`} className="appointmentButton">
+            Learn More
+          </Link>
         </div>
       </div>
     </div>

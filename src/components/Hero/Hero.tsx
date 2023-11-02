@@ -47,7 +47,7 @@ const Hero = () => {
           alt=""
           width={500}
           height={600}
-          className="md:mt-[90px] md:w-[550px] md:h-[650px]"
+          className="md:mt-[90px] md:max-w-[550px] md:h-[650px]"
         />
       </div>
 

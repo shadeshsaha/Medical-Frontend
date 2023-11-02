@@ -27,9 +27,17 @@ export default function Home() {
       <Faqs />
       <BlogPage />
       {!isLoading && reviews?.data && <UserReviews data={reviews?.data} />}
+      <br className="md:hidden block" />
+      <br className="md:hidden block" />
       <FeedBackForum />
 
-      <FloatButton.BackTop type="primary" tooltip="Scroll to top" />
+      <FloatButton.BackTop
+        type="primary"
+        tooltip="Scroll to top"
+        style={{
+          backgroundColor: "#4851D5",
+        }}
+      />
     </div>
   );
 }

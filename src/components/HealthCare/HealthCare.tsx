@@ -55,7 +55,7 @@ const HealthCare = () => {
       className="h-screen common w-full mb-[150px] flex justify-end items-center border-2 border-borderColor"
     >
       <div
-        className="bg-primary rounded-xl md:p-[60px] p-[10px] font-inter text-white md:w-[720px] md:h-[780px]"
+        className="bg-primary rounded-xl md:p-[60px] p-[20px] font-inter text-white md:w-[720px] md:h-[780px]"
         // style={{ marginTop: "4%" }}
       >
         <p className="md:text-[18px] font-semibold pb-[16px]">VISITING HOURS</p>
@@ -81,7 +81,21 @@ const HealthCare = () => {
               {/* <button className="bg-black rounded-xl px-[15px] font-inter text-white text-[12px] ">
                 Book Now
               </button> */}
-              <Button onClick={handleInfo} type="primary">
+              <Button
+                onClick={handleInfo}
+                type="primary"
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  border: "none",
+                  width: "100px",
+                  height: "30px",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                  color: "#4851D5",
+                  cursor: "pointer",
+                }}
+              >
                 Book Now
               </Button>
             </div>

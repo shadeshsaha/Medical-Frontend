@@ -51,21 +51,24 @@ export default function UserReview({ data }: any) {
         {/* left site card */}
         <div className="max-w-xl text-start ltr:sm:text-left rtl:sm:text-right max-h-[600px]">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Read trusted reviews from our customers
+            {/* Read trusted reviews from our customers */}
+            Discover the Experiences of Our Valued Patients
           </h2>
 
           <p className="mt-4 text-gray-700">
-            Medic is a platform that connects patients with doctors and
-            pharmacies. We are a team of doctors, pharmacists, and technologists
-            that believe in the power of technology to improve access to
-            healthcare for all Egyptians.
+            Birdem CDIC is a dedicated medical institution that bridges the gap
+            between patients and healthcare solutions. With a team of committed
+            medical professionals, specialists, and technology experts, we are
+            dedicated to leveraging cutting-edge technology to enhance
+            healthcare accessibility for the benefit of all individuals at
+            Birdem and beyond.
           </p>
 
           <div className="hidden lg:mt-8 lg:flex lg:gap-4">
             <button
               aria-label="Previous slide"
               id="keen-slider-previous-desktop"
-              className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+              className="rounded-full border border-[#4851D5] p-3 text-[#4851D5] transition hover:bg-[#666feb] hover:text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +89,7 @@ export default function UserReview({ data }: any) {
             <button
               aria-label="Next slide"
               id="keen-slider-next-desktop"
-              className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+              className="rounded-full border border-[#4851D5] p-3 text-[#4851D5] transition hover:bg-[#666feb] hover:text-white"
             >
               <svg
                 className="h-5 w-5 rtl:rotate-180"
@@ -116,7 +119,7 @@ export default function UserReview({ data }: any) {
                 <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
                   <div>
                     <div className="mt-4">
-                      <p className="text-2xl font-bold text-rose-600 sm:text-3xl">
+                      <p className="text-2xl font-bold text-gray-800 sm:text-3xl">
                         {item?.feedbackSubject}
                       </p>
                       <p className="mt-4 leading-relaxed text-gray-700">
@@ -150,7 +153,7 @@ export default function UserReview({ data }: any) {
         <button
           aria-label="Previous slide"
           id="keen-slider-previous"
-          className="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          className="rounded-full border border-[#4851D5] p-4 text-[#4851D5] transition hover:bg-[#666feb] hover:text-white"
         >
           <svg
             className="h-5 w-5 -rotate-180"
@@ -170,7 +173,7 @@ export default function UserReview({ data }: any) {
         <button
           aria-label="Next slide"
           id="keen-slider-next"
-          className="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+          className="rounded-full border border-[#4851D5] p-4 text-[#4851D5] transition hover:bg-[#666feb hover:text-white"
         >
           <svg
             className="h-5 w-5 -rotate-180"
